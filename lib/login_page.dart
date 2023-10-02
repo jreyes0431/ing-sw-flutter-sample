@@ -6,7 +6,29 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("Algo"),
+      backgroundColor: const Color(0xFFD9958F),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Spacer(),
+          const Text(
+            "Te damos la bienvenida a ClaeApp",
+            textAlign: TextAlign.start,
+            style: TextStyle(
+              fontSize: 30,
+            ),
+          ),
+          const Spacer(),
+          TextFormField(),
+          const Spacer(),
+          const SizedBox(
+            height: 60,
+            width: 120,
+            child: InkWell(),
+          ),
+          const Spacer(),
+        ],
+      ),
     );
   }
 }
