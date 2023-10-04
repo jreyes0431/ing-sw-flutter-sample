@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:test_ing_mw/home_page.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +22,13 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          TextFormField(),
+          TextFormField(
+            controller: controller,
+          ),
           const Spacer(),
           ElevatedButton(
             onPressed: () {
+              print(controller.text);
               Navigator.push(
                 context,
                 MaterialPageRoute(
