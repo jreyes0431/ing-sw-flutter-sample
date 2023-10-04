@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_ing_mw/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -21,10 +22,16 @@ class LoginPage extends StatelessWidget {
           const Spacer(),
           TextFormField(),
           const Spacer(),
-          const SizedBox(
-            height: 60,
-            width: 120,
-            child: InkWell(),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => HomePage(),
+                ),
+              );
+            },
+            child: Text("Ingresar"),
           ),
           const Spacer(),
         ],
