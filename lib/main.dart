@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login_page.dart';
+import 'wlcome_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,7 +11,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      theme: ThemeData(
+        colorSchemeSeed: const Color(0xFFA6382E),
+      ),
+      home: WellcomePage(),
     );
   }
 }
