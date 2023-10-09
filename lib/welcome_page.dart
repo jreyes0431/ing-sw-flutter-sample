@@ -65,8 +65,6 @@ class WellcomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
-              backgroundColor:
-                  const MaterialStatePropertyAll(Color(0xFFA6382E)),
             ),
             child: const Padding(
               padding: EdgeInsets.all(8.0),
