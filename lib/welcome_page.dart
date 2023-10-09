@@ -4,6 +4,8 @@ import 'package:test_ing_mw/home_page.dart';
 class WellcomePage extends StatelessWidget {
   WellcomePage({super.key});
 
+  //Este es el controlador del TextFormField
+  //De acá sacaremos el texto que el usuario ingrese
   final TextEditingController controller = TextEditingController();
 
   @override
@@ -27,13 +29,16 @@ class WellcomePage extends StatelessWidget {
           ),
           const Spacer(),
           SizedBox(
-            width: 220,
+            width: 220, // le damos un tamaño fijo al textfield
             child: TextFormField(
               controller: controller,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),
               decoration: InputDecoration(
+                //En este estilo casi no se toca el color
+                //Ya que usamos el color del tema de la app
+                //Recuerden que en el main.dart le dimos un color al tema
                 fillColor: Colors.white,
                 filled: true,
                 border: UnderlineInputBorder(
@@ -52,6 +57,7 @@ class WellcomePage extends StatelessWidget {
           const SizedBox(height: 24),
           ElevatedButton(
             onPressed: () {
+              //En el botón simplemente empujamos la ruta de Home
               Navigator.push(
                 context,
                 MaterialPageRoute(
