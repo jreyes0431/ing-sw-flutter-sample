@@ -55,7 +55,9 @@ class WellcomePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => const HomePage(),
+                  builder: (_) => HomePage(
+                    name: controller.text,
+                  ),
                 ),
               );
             },
